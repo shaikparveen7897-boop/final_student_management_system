@@ -11,7 +11,25 @@ SECRET_KEY = 'django-insecure-change-this-before-you-deploy'
 # True while we are learning. On Day 5 we change this to False.
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+from pathlib import Path
+
+# BASE_DIR is the folder that contains manage.py
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+SECRET_KEY = 'django-insecure-change-this-before-you-deploy'
+
+# True while we are learning. On Day 5 we change this to False.
+DEBUG = True
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'final-student-management-system-1.onrender.com',
+]
+CSRF_TRUSTED_ORIGINS = [
+    'https://final-student-management-system-1.onrender.com',
+]
+
 
 
 INSTALLED_APPS = [
